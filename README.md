@@ -18,7 +18,7 @@ The bloodon project is based on django 1.5.
 For the map used in the project, [mapbox !] (https://www.mapbox.com) provides a beautiful maps, you can create a free project and integrate your mapbox app id.
 
 
-**Leaf left**
+**Leaflet**
 =======
 
 The map that works is based on the [Leaflet project !] (http://leafletjs.com/)

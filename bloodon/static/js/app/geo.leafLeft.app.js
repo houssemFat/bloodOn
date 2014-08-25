@@ -327,7 +327,7 @@ BloodOn.GeoTools.buildMap = function(id, viewOn, zoom) {
         _zoom = BloodOn.GeoTools.parseCoordinate($mapZoom[0].lang);
     }
 
-   var map = L.mapbox.map(id, 'houssemfat.map-jrzf0li9')
+   var map = L.mapbox.map(id, 'your-map-box-app-key')
        .setView(_viewOn, _zoom);
     L.control.scale().addTo(map);
     BloodOn.GeoTools._map = map ;

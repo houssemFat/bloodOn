@@ -1,0 +1,216 @@
+    #map_ui {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+		text-align:center;
+    }
+
+    #map_ui ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #map_ui a {
+        font-size: 13px;
+        background: #FFF;
+        color: #3C4E5A;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #BBB;
+        border-bottom-width: 0;
+        max-width: 30px;
+        min-width: 30px;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    #map_ui a:hover {
+        background: #ECF5FA;
+    }
+
+    #map_ui li:last-child a {
+        border-bottom-width: 1px;
+        -webkit-border-radius: 0 0 3px 3px;
+        border-radius: 0 0 3px 3px;
+    }
+
+    #map_ui li:first-child a {
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+    }
+
+    #map_ui a.active {
+        background: #3887BE;
+        border-color: #3887BE;
+        color: #FFF;
+    }
+#map_container{
+	margin: 0 auto;
+	background:#333;
+}
+.leaflet-div-icon{
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-transform: translate3d(597px, 111px, 0);
+    z-index: 111;
+    border-radius: 50%;
+    background-color: rgba(64, 143, 158, 0.38);
+}
+.leaflet-div-icon div{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    vertical-align : middle;
+    color: white;
+    border-radius: 15px;
+}
+.leaflet-div-icon span#count{
+    font: 18px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	top: 3px;
+	position: relative;
+}
+/* slide marker*/
+#user_marker_container #slide_container{
+    width: 200px;
+    position: relative;
+    height: 2px;
+}
+/* slide marker*/
+#user_marker_container #slider, #user_marker_container #slider_bg{
+    position: absolute;
+    left : 0px;
+    bottom: 3px;
+    height: 4px;
+    border-radius: 4px;
+}
+#user_marker_container  #slider_text{
+    position: absolute;
+    top : 1px;
+    z-index: 3;
+    left: 0px;
+}
+#user_marker_container #slider{
+    background-color: orange;
+    z-index: 2;
+}
+#user_marker_container #slider_bg{
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 1;
+}
+#user_marker_container #zoom_circle_container  li{
+    display: inline-block;
+}
+#user_marker_container #zoom_circle_container {
+    width: 300px;
+    height: 28px;
+    background-color: gray;
+    opacity: 0.9;
+}
+#map_ui #inner {
+	position: absolute;top:0px;right:45px
+	
+}
+/* choices style */
+
+/* slide marker*/
+#map_blood_choices #map_blood_choices_container{
+    width: 300px;
+    height: 50px;
+    position: relative;
+}
+
+#map_blood_choices #map_blood_choices_container  li{
+    display: inline-block;
+}
+.blood-choice-item{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: gray;
+    color: #ffffff;
+    padding: 2px;
+}
+.blood-choice-on{
+    background-color: #0e90d2 !important;
+}
+ 
+/* Landscape phones and down */
+@media only screen and (max-width : 480px) {
+	#map_ui ul li{
+        display: inline-block;
+        padding: 0px !important;
+        margin:0px !important;
+    }
+    #map_ui li:last-child a {
+        border-bottom-width: 1px;
+        -webkit-border-radius: 0 3px 3px 0;
+        border-radius:  0 3px 3px 0;
+        border-left-width: 0px;
+    }
+
+    #map_ui li:first-child a {
+        -webkit-border-radius:  3px 0 0 3px;;
+        border-radius:  3px 0 0 3px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+    }
+    
+	/* slide marker*/
+	#user_marker_container #slide_container{
+	    height: 200px;
+	    position: relative;
+	    width: 2px;
+	}
+	
+	#user_marker_container #zoom_circle_container {
+	    width: 28px;
+	    height: 270px;
+	}
+	
+	/* slide marker*/
+	#user_marker_container #slider, #user_marker_container #slider_bg{
+	    position: absolute;
+	    top : 0px;
+	    right: 3px;
+	    width: 4px;
+	    border-radius: 4px;
+	}
+	
+	#user_marker_container #slider_bg{
+	    background-color: #ffffff;
+	    height: 100%;
+	    z-index: 1;
+	}
+	#map_ui #inner {
+		position: absolute;
+		top:35px;
+		right:0px;
+	}
+	#map_blood_choices #map_blood_choices_container{
+	    height: 300px;
+	    width: 50px;
+	}
+	
+	#map_blood_choices #map_blood_choices_container  li{
+	    display: block !important;
+	    margin-bottom:2px !important;
+	}
+	#user_marker_container #slider{
+	    background-color: orange;
+	    z-index: 2;
+	    width: 4px;
+	}
+	
+	#user_marker_container  #slider_text{
+	    left: 7px;
+	}
+}
+ 

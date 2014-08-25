@@ -1,0 +1,113 @@
+/********************************
+ *******************************
+    Home file css class
+ *******************************
+ */
+.home-container{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.time-line-alert{
+    margin: 3px;
+    border-bottom: dotted 1px rgba(44, 36, 36, 0.5);
+    padding: 10px;
+}
+.time-line-blood{
+    float: left;
+    background-color: red;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 8px;
+    min-width: 50px;
+}
+#app_alerts_scroll{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+   -webkit-border-radius: 5px ;
+    position: absolute;
+    top : 0px;
+    right: 0px;
+    width: 10px;
+    background-color: gray;
+    z-index: 2;
+}
+
+#app_alerts_container{
+    position: relative;
+}
+.app-popup{
+
+}
+.app-popup-body {
+}
+.blood-info-ul{
+    list-style: none;
+}
+.blood-info-ul li{
+    display: inline;
+}
+.blood-info-blood{
+    color: #b3b3b3;
+    font-size: 20px;
+}
+.blood-info-count{
+    color: red;
+    font-size: 30px;
+
+}
+
+.share-inside {
+    padding: 4px;
+}
+.share-inside .share-btn{
+    padding: 3px;
+}
+#home_sign_login_form {
+    border-right:dotted 2px gray;
+}
+
+/* Landscape phone to portrait tablet 767px*/
+@media (max-width: 780px) {
+	#home_sign_login_form{
+		 border-right:none;
+		 border-bottom:dotted 2px gray;
+	}
+}
+.email-item-message{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 2px;
+}
+.email-item-message .delete {
+    opacity: 0.4;
+    position: relative;
+    border: none;
+    padding: 0px;
+    margin: 5px;
+    right: 0px;
+    font-weight: bold;
+    display: inline-block;
+    zoom: 1;
+}
+.email-item-text {
+    font-size: 11px;
+}
+.email-item-message .delete:hover{
+    color: red;
+}
+.app-friend:hover{
+	cursor: pointer;
+	opacity: 0.5
+}
+.app-friend:hover label{
+	font-size: 18px
+}
+.app-friend label{
+	font-family: "Lucida Console";
+	font-size: 15px
+}

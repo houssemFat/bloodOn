@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load bloodi_extras %}
+<div class="text-center row span12">
+    <div  id="app_alerts_container" class="row-fluid span10 offset2" >
+{% for alert in alertObjects %}
+<div class="pull-left" style="width:50%;">
+    <div id="{{alert.id}}" style="padding: 10px">
+       <div class="app-alert-item-body">
+           <div class="time-line-blood">
+           {{  alert.blood.get_blood_display }}
+           </div>
+            <i class="icon-calendar"></i>
+            <span class="">{{ alert.date_for|date:"D d M Y" }}
+            </span>
+           <br/>
+            <i class="icon-map-marker"></i>
+            <span>{{ alert.organization.name }}</span>
+       </div>
+        {% include "home/organization/share.html" with url=alert.id  %}
+        </div>
+</div>
+{% endfor %}
+</div>
+    
+</div>
+<!--
+<div class="row">
+                    {% for item in  friends %}
+                      <div >
+                          <div style="position: relative">
+                              <div style="position: absolute;top:10px;z-index: 1">
+                                  <label style="color: white">{{item.0}}</label>
+                              </div>
+                              <img src="{{item.1}}" width="90px"  style="height: 90px !important"/>
+                        </div>
+                      </div>
+                    {% endfor %}
+                </div>
+            -->

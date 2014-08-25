@@ -1,0 +1,135 @@
+@import url(key_board.css);
+@import url(calendar.css);
+@import url(map.css);
+@import url(home.css);
+
+.icon-validation{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background-color:red;
+	top: 4px;
+	position: relative;
+	right: 2px;
+}
+
+/* Landscape phones and down */
+@media only screen and (max-width : 480px) {
+
+	.icon-validation {
+		width:5px;
+		height:5px;
+	}
+
+}
+.clear {
+	clear: both;
+	height: 0px;
+}
+.hand {
+	cursor : pointer;
+}
+#header{
+	height : 45px;
+}
+.app-profile-label{
+	font-weight : bold;
+	font-size : 20px
+}
+.app-search {min-width:300px;margin:0 auto; display:block; min-height: 300px;}
+
+/* accounts */
+ul.errorlist li{
+	color :orange;
+}
+ul.errorlist{
+	list-style:none;
+}
+form.user-form label{
+	content :vxgb  "";
+}
+form.user-form input{
+	clear :both;
+}
+#footer {
+	direction : rtl;
+}
+#register_form input, #login_form input, #signup_form input{
+	margin-bottom : 10px;
+}
+
+.app-social-google{
+    background: transparent url(/static/img/social/login-google/Red_signin_Medium_base_20dp.png) no-repeat;
+    width : 90px;
+	height: 30px;
+}
+.app-social-google:hover{
+    background: transparent url(/static/img/social/login-google/Red_signin_Medium_hover_20dp.png) no-repeat;
+}
+.app-social-google:press{
+    background: transparent url(/static/img/social/login-google/Red_signin_Medium_press_20dp.png) no-repeat;
+}
+.app-social-facebook {
+    background: transparent url(/static/img/social/FB-f-Logo__blue_29.png) no-repeat;
+    height: 29px;
+    width: 40px;
+}
+.overlay{
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 4px;
+}
+#sing_in_modal *{
+    direction: ltr ;
+}
+
+.ajax-loader{
+    background: transparent url(/static/img/ajax-loader.gif) no-repeat;
+    display: inline-block;
+    width: 128px;
+    height: 15px;
+}
+
+
+.languages form{
+	margin:0px;
+	padding:0px;
+	padding-top : 2px;
+}
+
+.languages input[type="submit"]{
+	border : none;
+	background-color:white;
+	font-size : 10px !important;
+	padding:1px;
+	margin:0px;
+}
+.languages .active-language{
+	#background-color:gray !important;
+	color:#84C3EE;
+}
+.mobile-app-soon{
+	transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Safari and Chrome */
+	position: absolute;
+	left: 0px;
+	top:50px;
+	z-index: 10;
+	font-family: cursive;
+	font-size: xx-large;
+}
+
+/* Landscape phones and down */
+@media only screen and (max-width : 480px) {
+	.app-full-screen-text {
+		display : none;
+	}
+	.control-label {
+		min-width: 25px;
+		padding-left: 5px;
+	}
+	.app-phone-screen {
+		display : block;
+	}
+}

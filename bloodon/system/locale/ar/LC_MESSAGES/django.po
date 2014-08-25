@@ -1,0 +1,355 @@
+# This file is free for use
+# Fathallah houssem <fathallah.houssem@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: templates/common/header.html
+msgid "select your place"
+msgstr "حدد مكانك"
+
+#: ---- PROFILE -------------
+msgid "Your blood type"
+msgstr "فصيلة دمك"
+
+#: templates/accounts/profile.html
+msgid "change password"
+msgstr "تغيير كلمة المرور"
+
+#: templates/accounts/profile.html
+msgid "select my location"
+msgstr "حدد موقعي"
+
+#: templates/common/profile.html
+msgid "Your name"
+msgstr "اسمك"
+
+#: ---- PROFILE ------------- templates/common/profile.html
+msgid ""
+"these informations are confidential. we promise that would not been shared"
+msgstr "هذه المعلومات سرية. نحن نعد أنه لن يتم نشرها"
+
+#: templates/footer.html
+msgid "confidentiality"
+msgstr "الخصوصية"
+
+#: ---- MENU ------------- templates/common/alert.html
+msgid "type of Blood"
+msgstr "نوع الدم"
+
+msgid "when"
+msgstr "متى"
+
+#: templates/common/alert.html
+msgid "where"
+msgstr "أين"
+
+#: templates/common/alert.html
+msgid "the phone number"
+msgstr "رقم الهاتف"
+
+#: templates/common/alert.html
+msgid "more explanation (optional)"
+msgstr "مزيد من التوضيح"
+
+#: templates/common/alert.html
+msgid "Close"
+msgstr "غلق"
+
+#: templates/common/alert.html
+msgid "I need Blood"
+msgstr "أحتاج الدمّ"
+
+#: templates/common/alert.html
+msgid "Alert"
+msgstr "إعلام"
+
+#: ---- MENU ------------- templates/common/menu.html
+msgid "home"
+msgstr "الرئيسية"
+
+#: templates/common/menu.html
+msgid "search"
+msgstr "بحث"
+
+#: templates/common/menu.html
+msgid "Schedule"
+msgstr "الجدول الزمني"
+
+#: templates/footer.html template/common/contact.html
+msgid "Contact us"
+msgstr "اتصل بنا"
+
+#: templates/footer.html
+msgid "help"
+msgstr "مساعدة"
+
+#: templates/footer.html
+msgid "about"
+msgstr "حول"
+
+#: templates/footer.html
+msgid "Send"
+msgstr "إرسال"
+
+#: templates/common/map_user_marker_control.html
+msgid "search near you"
+msgstr "بحث بالقرب منك"
+
+#: templates/common/map_blood_choices_control.html
+msgid "filter by blood type"
+msgstr "نوع الدم"
+
+#: templates/accounts/account/sign.html templates/accounts/account/login.html
+#: templates/accounts/account/forget_password.html
+#: templates/accounts/account/reset_password.html
+msgid "Email Address"
+msgstr "البريد الإلكتروني"
+
+#: templates/accounts/account/sign.html templates/accounts/account/login.html
+#: templates/home/signin.html templates/home/header.html
+msgid "Login"
+msgstr "دخول"
+
+#: templates/accounts/account/sign.html templates/home/signin.html
+msgid "Creation"
+msgstr "إنشاء حساب جديد"
+
+#: templates/accounts/account/sign.html templates/home/signin.html
+msgid "Create"
+msgstr "سجل"
+
+#: templates/accounts/account/sign.html templates/home/signin.html
+msgid "ReadTOS"
+msgstr "قرأت شروط الخدمة"
+
+#: templates/accounts/account/sign.html templates/home/signin.html
+msgid "Remember me"
+msgstr "تذكرني"
+
+#: templates/accounts/account/sign.html templates/home/signin.html
+msgid "Account"
+msgstr "حساب"
+
+#: templates/home/sendto.html
+msgid "Emails list"
+msgstr "عناوين البريد الإلكتروني"
+
+#: templates/home/sendto.html
+msgid "Send to"
+msgstr "إرسال إلى"
+
+#: templates/home/organization_details.html
+msgid "Share"
+msgstr "شارك"
+
+#: templates/home/organization_details.html
+msgid "Your language"
+msgstr "لغتك المستخدمة"
+
+#: account/forms.py:216
+msgid "A user is already registered with this e-mail address."
+msgstr "هناك مستخدم آخر يستخدم بالفعل هذا العنوان."
+
+#: account/forms.py:256 account/forms.py:333 account/forms.py:349
+#: account/forms.py:418
+msgid "You must type the same password each time."
+msgstr "يجب إدخال نفس كلمة السر مرتين."
+
+#: account/forms.py:327
+msgid "Please type your current password."
+msgstr "يرجى كتابة كلمة السر الحالية."
+
+#: account/forms.py:371
+msgid "The e-mail address is not assigned to any user account"
+msgstr "لا يوجد أي مستخدم مع هذا عنوان البريد الإلكتروني."
+
+#: account/models.py:82
+msgid "email confirmation"
+msgstr "تأكيد عبر البريد الالكتروني"
+
+#: account/utils.py:290
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s"
+msgstr "%(email)s تم إرسال رسالة تأكيد بالبريد الإلكتروني إلى"
+
+#: templates/account/email_confirm.html:17
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"هو <a href=\"mailto:%(email)s\">%(email)s</a> الرجاء التأكد من أن"
+"%(user_display)s.عنوان البريد الإلكتروني ل"
+
+#: templates/account/email_confirm.html:21
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: templates/account/email_confirm.html:28
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"رابط التأكيد منتهية الصلاحية أو غير صالحة. من فضلك<a href=\"%(email_url)s"
+"\">إصدار  تأكيد البريد الإلكتروني</a>. أطلب"
+
+#: templates/account/email_confirmed.html:15
+#, python-format
+msgid ""
+"You have confirmed that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s."
+msgstr ""
+"هو %(user_display)s لقد أكدت أن عنوان البريد الإلكتروني للمسخدم <a href="
+"\"mailto:%(email)s\">%(email)s</a>."
+
+#: templates/account/password_change.html:4
+#: templates/account/password_change.html:7
+#: templates/account/password_change.html:12
+#: templates/account/password_reset_from_key.html:5
+#: templates/account/password_reset_from_key.html:8
+#: templates/account/password_reset_from_key_done.html:5
+#: templates/account/password_reset_from_key_done.html:8
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: templates/account/password_reset.html:6
+#: templates/account/password_reset.html:10
+#: templates/account/password_reset_done.html:6
+#: templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: templates/account/password_reset.html:15
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"هل نسيت كلمة المرور؟ ادخل عنوان البريد الإلكتروني الخاص بك أدناه، وسوف نرسل "
+"لك رسالة بالبريد الالكتروني مما يسمح لك لإعادة تعيينها."
+
+#: templates/account/password_reset.html:20
+msgid "Reset My Password"
+msgstr "إعادة تعيين كلمة المرور الخاصة بي"
+
+#: templates/account/password_reset.html:23
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+"يرجى الاتصال بنا إذا كان لديك أي مشكلة إعادة تعيين كلمة السر الخاصة بك."
+
+#: templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"لقد قمنا بإرسال رسالة بريد إلكتروني.يمكنك الاتصال بنا اذا لم تحصل عليه في "
+"غضون بضع دقائق."
+
+#: templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"رابط إعادة تعيين كلمة المرور غير صالح، ربما لأنه وقع استخدامه.<a href="
+"\"%(passwd_reset_url)s> لإعادة تعيين كلمة المرور الخاصة بك </a> يرجى تقديم "
+"طلب جديد"
+
+#: templates/account/password_reset_from_key.html:21
+#: templates/account/password_reset_from_key_done.html:9
+msgid "Your password is now changed."
+msgstr "تم تغيير كلمة المرور الخاصة بك."
+
+#: templates/account/password_set.html:5 templates/account/password_set.html:8
+#: templates/account/password_set.html:13
+msgid "Set Password"
+msgstr "تعيين كلمة المرور"
+
+#: templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account at %(site_domain)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+"\n"
+"In case you forgot, your username is %(username)s.\n"
+"\n"
+"Thanks for using our site!\n"
+msgstr ""
+"أنت تتلقى هذا البريد الإلكتروني لأنك أو أي شخص آخر قد طلب%(site_domain)s "
+"إعادة تعيين كلمة المرور على موقعنا.\n"
+"يمكنك ببساطة تجاهل هذه الرسالة إذا كان الطلب لا يأتي منك.\n"
+"لإعادة تعيين كلمة المرور الخاصة بك، اضغط على الرابط أدناه:\n"
+"\n"
+"%(password_reset_url)s\n"
+"\n"
+"نشكرك على استخدام موقعنا %(username)s .!\n"
+
+#: templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr "إعادة تعيين كلمة المرور الخاصة بك عن طريق البريد الإلكتروني"
+
+#: templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr "%(email)s لقد أكدت."
+
+#: templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "تم تغيير كلمة المرور بنجاح."
+
+#: templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "تم تعيين كلمة المرور بنجاح."
+
+#: templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr "ملاحظة"
+
+#: templates/socialaccount/account_inactive.html:5
+#: templates/socialaccount/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "حساب غير مفعَل"
+
+#: templates/socialaccount/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "هذا الحساب غير مفعَل."
+
+#: templates/socialaccount/authentication_error.html:5
+#: templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr "فشل في الاتصال بالشبكة الاجتماعية"
+
+#: templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"حدث خطأ أثناء محاولة تسجيل الدخول باستخدام حساب الشبكة الاجتماعية الخاصة بك."
+
+#: templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr ""
+
+#: templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr ""
+
+#: templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr ""

@@ -1,0 +1,22 @@
+{% extends "header.html" %}
+{% load i18n %}
+<!-- content -->
+{% block hot_link %}
+    <a class="" href="{% url 'user_profile' %}">
+        <i class="icon-wrench "></i>
+    </a>
+{% endblock %}
+{% block header_menu %}
+	<div class="inline pull-right">
+	<!--	<a id="show_calendar" href="#" class="btn btn-info btn-small"
+            data-toggle="button">
+            <i class="icon-calendar icon-white"></i>
+            <span class="app-full-screen-text">{% trans "Schedule" %}</span></a>!-->
+		<a id="alert"  href="#" class="btn btn-danger btn-small" >
+            <span class="app-full-screen-text">
+                {% trans "I need Blood" %}
+            </span>
+            <i class="icon-white icon-bullhorn"></i>
+		</a>
+	</div>
+{% endblock %}

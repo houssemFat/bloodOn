@@ -1,0 +1,68 @@
+{% load i18n %}
+{% load socialaccount %}
+<div id="sing_in_modal" class="modal fade" tabindex="-1" style="display: none">
+  <div class="modal-header center">
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title"> bloodOn {% trans "Account" %}</h4>
+  </div>
+  <div class="modal-body">
+		<div class="row-fluid rtl">
+			<div class="span6 text-center" id="home_sign_login_form" style="padding-right : 3px">
+                <h4 class="modal-title text-center">{% trans "Login" %}</h4>
+                <form class="form-horizontal" id="login_form" role="form" method="POST" action="{% url 'account_login' %}" >
+                        {% csrf_token %}
+                      <input type="email" class="form-control" name="email" placeholder='{% trans "Email Address" %}'/>
+                      <input type="password" class="form-control" name="password" placeholder='{% trans "Password" %}'/>
+                      <div class="form-group">
+                            <input type="checkbox" name="remember_me"> {% trans "Remember me" %}
+                            <button type="submit" class="btn btn-success">{% trans "Login" %}</button>
+                      </div>
+                </form>
+                <div>
+                    <div class="row span8">
+                        <a class="inline" href="{% url 'socialaccount_signup' "facebook" %}">
+                        <div class="app-social-facebook pull-left" data-width="90px"></div><div class="inline pull-left">{% trans "Login with facebook" %}</div>
+                        </a>
+                    </div>
+                    <div class="row span4">
+                        <a class="inline" href="{% url 'socialaccount_signup' "google" %}"><div class="app-social app-social-google  inline"></div></a>
+                    </div>
+                </div>
+			</div>
+			<div class="span6 row-fluid">
+                <h4 class="modal-title text-center">{% trans "Creation" %}</h4>
+                <form class="form-horizontal" id="register_form" role="form" method="post" action="{% url 'account_signup' %}" >
+                     {% csrf_token %}
+                  <div class="form-group">
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control row-fluid rtl" id="username" name="username" placeholder='{% trans "Username" %}'>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-lg-10">
+                      <input type="email" class="form-control row-fluid" id="inputEmail1" name="email" placeholder='{% trans "Email Address" %}' autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control row-fluid" name="password1" placeholder='{% trans "Password" %}' autocomplete="off">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control row-fluid" name="password2" placeholder='{% trans "Password (again)" %}'>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <input type="checkbox" name="read_contract"> <span style="font-size: 10">{% trans "ReadTOS" %}</span>
+                        <button type="submit" class="btn btn-success">{% trans "Create" %}</button>
+                    </div>
+                  </div>
+                </form>
+			</div>
+		</div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div style="display:none">
+	{% for organization in organizations %}
+		<div class="organization" id="{{ organization.latitude }}#{{ organization.longitude }}" server='{ "id" : "{{organization.id}}" , "title" : "{{organization.name}}" }'></div>
+	{% endfor %}
+</div>

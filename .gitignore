@@ -1,0 +1,17 @@
+# Created by http://www.gitignore.io
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+settings.py
+wsgi.py
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+# Django stuff:
+*.log

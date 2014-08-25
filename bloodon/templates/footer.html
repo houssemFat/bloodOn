@@ -1,0 +1,40 @@
+{% load bloodi_extras %}
+{% load i18n  %}
+<div class="row-fluid">
+	<div class="span4" style="text-align:left">
+		<ul class="inline">
+			<li class="in"><a href="#">In</a></li>
+			<li class="tw"><a href="#">fb</a></li>
+			<li class="fb"><a href="#">Tw</a></li>
+			<li class="g"><a href="#">G+</a></li>
+		</ul>
+	</div>
+	<div class="span8">
+		<ul class="inline" style="text-align:right">
+			<li class="footer-menu-item"><a href="/public/help">{% trans "help" %}</a></li>
+			<li class="footer-menu-item"><a id="contact_us" href="#">{% trans "Contact us" %}</a></li>
+			<li class="footer-menu-item">
+				<ul class="languages inline">
+					<li>
+						<i class="icon-globe"></i>
+					</li>
+					<li>
+						{% get_current_language as CURRENT %}
+						{% for lang in LANGUAGES  %}
+						<form action="/i18n/setlang/" method="post">
+							{% csrf_token%}
+							<input type="hidden" name="language" value="{{ lang.0 }}"/>
+							<input type="submit" {% if lang.0 == CURRENT %}class="active-language"{% endif %} value="{{ lang.1 }}"/>
+						</form>
+					<li>
+					{% endfor %}
+				</ul>
+			</li>
+			<li>
+			    soon on android OS
+                 <img alt="Get it on Google Play" class="img-responsive" style="width:100px;height:40px"
+                   src="https://developer.android.com/images/brand/ar_generic_rgb_wo_45.png" />
+			</li>
+		</ul>
+	</div>
+</div>

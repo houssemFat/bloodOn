@@ -1,0 +1,73 @@
+{% load i18n %}
+<div id="modal_alert" class="modal fade rtl" tabindex="-1" data-width="400" style="display: none;">
+  <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">{% trans "Alert" %}</h4>
+  </div>
+  <div class="modal-body">
+	<form action="alerts/create/" method="post" class="form-horizontal rtl" id="create_alert">
+		{% csrf_token %}
+        <fieldset>
+		<!-- Place -->
+		<!-- Date -->
+		<div class="control-group">
+		  <label class="control-label">
+		      <span class="app-full-screen-text">{% trans "type of Blood" %}*</span><i class="icon-tint"></i>
+		  </label>
+		  <div class="controls-row  error">
+				<select id="blood_select" >
+				{% for blood in bloods %}
+					<option id="{{ blood.id }}" style="color: #000000 !important">{{ blood.get_blood_display }} </option>
+				{% endfor %}
+				</select>
+            <div id="blood_select_validation" class="inline icon-validation"></div>
+		  </div>
+		</div>
+		<div class="control-group">
+		  <span class="control-label"><span class="app-full-screen-text">{% trans "where" %} *</span><!--
+                  --><i id="use_map_to_select_place"  class="hand icon-map-marker"></i>
+                  <!--<i class="hand write-arabic icon-pencil" for="places_of_donation"></i>-->
+		  </span>
+		  <div class="controls-row error">
+			<input id="places_of_donation"   type="text" title="" data-source="typeahead" autocomplete="off">
+			<input id="fake_place_of_donation"  class="btn btn-medium"  type="text" value="{% trans "select place" %}*" autocomplete="off">
+			<div id="place_input_validation" class="inline icon-validation"></div>
+		  </div>
+		</div>
+		<!-- Date -->
+		<div class="control-group">
+		  <span class="control-label"><span class="app-full-screen-text">{% trans "when" %} * </span><i id="fire_time_of_donate" class="icon-calendar"></i></span>
+		  <div class="controls-row">
+				<input id="time_of_donate" class="ltr hand" style="cursor:pointer !important" type="text" required>
+				<div id="date_input_validation" class="inline icon-validation"></div>
+		  </div>
+		</div>
+		<!-- Phone -->
+		<div class="control-group">
+		  <span  for="alert_phone" class="control-label">
+		      <span class="app-full-screen-text">{% trans "the phone number" %} *</span><!--
+                  --><i  class="hand icon-user"></i>
+		  </span>
+		  <div class="controls-row">
+			<input  id="alert_phone" class="ltr" placeholder="{% trans "the phone number" %} *"  type="text" required/>
+			<div id="phone_input_validation"  class="inline icon-validation"></div>
+		  </div>
+		</div>
+		<!-- About -->
+		<div class="control-group">
+		  <span  for="textarea"  class="control-label">
+		      <span class="app-full-screen-text"> {% trans "more explanation (optional)" %}</span><!--
+		          --><i class="hand icon-info-sign"></i><i class="hand write-arabic icon-pencil" for="body_alert"></i>
+		  </span>
+		  <div class="controls-row">
+			<textarea id="body_alert" placeholder="{% trans "more explanation (optional)" %}" name="body" style="max-width:200px"></textarea>
+		  </div>
+		</div>
+		</fieldset>
+	</form>
+  </div>
+  <div class="modal-footer" style="text-align:left">
+    <button type="button"   class="btn btn-primary"><i class="icon-white icon-bell"></i>Soon</button>
+    <button type="button" data-dismiss="modal" class="btn btn-default">{% trans "Close" %}</button>
+  </div>
+</div>

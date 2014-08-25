@@ -1,0 +1,10 @@
+{% load i18n %}
+{% get_current_language as CURRENT %}
+<div id="main_calendar_view" class="row-fluid  span8 offset2 text-center"
+     style="{% if CURRENT == "ar" %}direction: rtl !important;{% endif %};
+     z-index: 1000;display: none">
+    <h1>{% trans "Schedule" %}</h1>
+    <div id="calendar" data-original-title="events" class="container-fluid">
+       {{Calendar}}
+    </div>
+</div>

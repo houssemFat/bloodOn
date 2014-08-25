@@ -1,0 +1,14 @@
+ 
+<div id='map_ui'>
+    <ul>
+        {% include "home/views/map/map_user_marker_control.html" %}<!--
+            -->{% include "home/views/map/map_blood_choices_control.html" %}
+    </ul>
+    {% if map_view %}
+    <div id="map_view_session" style="width: 0px;height: 0px;top:2500;display: none;visibility: hidden;position: fixed" lang="{{ map_view }}"></div>
+    <div id="map_zoom_session" style="width: 0px;height: 0px;top:2500;display: none;visibility: hidden;position: fixed" lang="{{ map_zoom }}"></div>
+    {% endif %}
+    {% if map_user %}
+    <div id="map_user_session" style="width: 0px;height: 0px;top:2500;display: none;visibility: hidden;position: fixed" infos="{{ map_user }}"></div>
+    {% endif %}
+</div>

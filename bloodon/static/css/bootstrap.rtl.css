@@ -1,0 +1,65 @@
+.ltr{
+    direction:  ltr !important;
+}
+.rtl{
+    direction:  rtl !important;
+}
+.nav-tabs > li, .nav-pills > li  {
+	float : right !important ;
+}
+.form-horizontal .controls {
+	margin-left: 0px !important;
+	margin-right: 180px ;
+}
+.form-horizontal .control-label {
+	float: right;
+	width: 160px;
+	padding-top: 5px;
+	text-align: left;
+}
+/* Large desktop */
+@media (min-width: 1200px) { }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet 767px*/
+@media (max-width: 780px) {
+	.sidebar{
+		position : absolute !important;
+		top :0px;
+		max-width : 380px;
+		background-color : #CCC;
+		z-index : 1000;
+        right:0px;
+	}
+    #mobile_menu {
+        display: inline-block;
+    }
+    #time_line{
+        display: none;
+    }
+    #map-canvas{
+        max-width: 100% !important;
+    }
+}
+
+.app-phone-screen {
+	display:none;
+}
+.ui-dialog-titlebar {
+    text-align: center;
+}
+.row-fluid input{
+
+}
+.modal-header{
+    background-color: #000000 !important;
+    color: #ffffff  !important;
+}
+.modal-header .close{
+    color: #FFFFFF  !important;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 1;
+}

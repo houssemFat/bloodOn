@@ -1,0 +1,142 @@
+.key-board-bg {
+	background: transparent url(/static/img/key_board/keys.png) no-repeat;
+}
+#arabic_key_board input{
+	font-size: 10px;
+	line-height: 1;
+	font-weight : bold;
+	text-align: center;
+	cursor :pointer ;
+	border: none !important;
+	background-color: #fff;
+	color: #000;
+	height: 27px;
+	margin-left : 1px !important ;
+	margin-top : 1px !important ;
+	padding : 0px !important ;
+
+}
+.keyboard{
+	width: 28px !important;
+}
+
+.key-delete{
+	background-position : -15px -28px;
+	width: 82px !important;
+}
+.key-shift-left{
+	width: 60px !important;
+	background-position : -12px -65px;
+	margin-left : 15px;
+}
+.key-shift-right{
+	width: 60px !important;
+	background-position : -24px -65px;
+}
+
+.key-enter {
+	width: 65px !important;
+	background-position: -16px 0px;
+}
+.key-delete:hover, .key-shift-left:hover, .key-shift-right:hover, .key-enter:hover, .key-board-bg-active {
+	background: transparent  url(/static/img/key_board/keys_hover.png) no-repeat;;
+}
+
+.key-delete:hover{
+	background-position : -15px -28px;
+}
+.key-shift-left:hover{
+	background-position : -12px -65px;
+}
+.key-shift-right:hover{
+	background-position : -24px -65px;
+}
+.key-enter:hover{
+	background-position: -16px 0px;
+}
+
+
+
+.key-tab{
+	width: 45px !important;
+}
+.key-state{
+    padding: 2px;
+    color: #ffffff;
+}
+.key-state:hover{
+    background-color: #006dcc;
+}
+.key-state-idle{
+    background-color: gray;
+}
+.key-state-active{
+    background-color: #0e90d2;
+    border-radius: 1px;
+}
+#arabic_key_board{
+	bottom:0px;
+	padding:2px;
+	cursor:move;
+	position:absolute;
+	z-index : 10500;
+	z-index:100;
+	display:none;
+	direction:ltr !important;
+	background-color:#b3b3b3;
+    max-width: 500px;
+    max-height: 180px;
+    
+}
+#arabic_key_board input:hover {
+	background-color : gray;
+	color: #fff;
+}
+#arabic_key_board_hide {
+	color : #eeeeee;
+    font-size: 8px;
+}
+#arabic_key_board_hide:hover{
+ background-color: red !important;
+ color:white;
+}
+#key_board_header div#title span{
+	color:white;
+}
+#key_board_header{
+    margin-bottom: 5px;
+}
+.key-espace{
+    width:250px !important
+}
+
+
+/* Landscape table tp pc 780px minmun*/
+@media (min-width: 780px) {
+    #mobile_symbol_screen{
+        display : none
+    }
+}
+/* Landscape phone to portrait tablet 767px*/
+@media (max-width: 780px) {
+	.keys-symbol{
+        display: none;
+    }
+    .key-board-large-screen{
+        display: none;
+    }
+    .keys-symbol{
+        display: none;
+    }
+    #arabic_key_board{
+        max-width: 480px;
+        max-height: 170px;
+    }
+    .key-espace{
+        width:50px !important;
+        height: 30px;
+    }
+    #arabic_key_board{
+        max-width: 480px;
+    }
+}

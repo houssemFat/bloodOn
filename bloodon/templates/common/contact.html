@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load url from future %}
+<div id="contact_modal" class="modal" tabindex="-1" style="display: none">
+    <div class="modal-header center">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title text-center">{% trans "Contact us" %}</h4>
+  </div>
+  <div class="modal-body">
+      <div class="span5">
+            <form action="{% url "contact_us" %}" method="post" class="form-horizontal">
+                  {% csrf_token %}
+                <fieldset>
+                    <!-- your name -->
+                    <div class="control-group">
+                          <span class="control-label"><span class="app-full-screen-text">{% trans "Your name" %} *</span>
+                              <i class="hand write-arabic icon-pencil" for="contact_us_name"></i>
+                          </span>
+                          <div class="controls-row">
+                            <input id="contact_us_name" name="name" type="text" title="" placeholder="{% trans "Your name" %} *" autocomplete="off">
+                            <div id="contact_us_name_validation" class="inline icon-validation"></div>
+                          </div>
+                      </div>
+                    <!-- your email -->
+                    <div class="control-group">
+                          <span class="control-label"><span class="app-full-screen-text">{% trans "Email Address" %} *</span>
+                          </span>
+                          <div class="controls-row">
+                            <input id="contact_us_email" name="email" class="ltr"  type="email" title="" placeholder="{% trans "Email Address" %} *">
+                            <div id="contact_us_email_validation" class="inline icon-validation"></div>
+                          </div>
+                    </div>
+                    <!-- your name -->
+                    <div class="control-group">
+                          <span class="control-label"><span class="app-full-screen-text">{% trans "Text" %} *</span>
+                              <i class="hand write-arabic icon-pencil" for="contact_us_text"></i>
+                          </span>
+                          <div class="controls-row">
+                            <textarea id="contact_us_text" cols="10" name="text" class="span5"
+                            value="" placeholder="{% trans "Text" %} *"></textarea>
+                            <div id="contact_us_text_validation" class="inline icon-validation"></div>
+                          </div>
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+  </div>
+  <div class="modal-footer" style="text-align:left">
+    <button type="submit" id="contact_us_submit" class="btn btn-primary"><i class="icon-white icon-envelope"></i> {% trans "Send" %}</button>
+    <button type="button" data-dismiss="modal" class="btn btn-default">{% trans "Close" %}</button>
+  </div>
+</div>

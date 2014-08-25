@@ -1,0 +1,10 @@
+﻿{% load i18n %}
+<div class="inline item-actions share-content">
+    <div class="btn-group" style="direction: ltr !important;">
+          <a href="#" title="{% trans "Send to" %}" class="send-to-item btn btn-primary btn-small"><i class="icon-white icon-envelope"></i></a>
+          <a href="#" title="{% trans "Share" %}" class="share-item btn btn-success btn-small" ><i class="icon-white icon-share-alt"></i></a>
+    </div>
+    <div class="share-inside" style="display: none">
+        {% include "common/social_share.html"%}
+    </div>
+</div>

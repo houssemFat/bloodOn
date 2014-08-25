@@ -1,0 +1,27 @@
+{% load i18n %}<!--
+--><li style="position: relative" id="user_marker_container">
+    <a id="select_my_place" href="#" title="{% trans "search near you" %}" class="btn btn-info btn-small" >
+        <i class="icon-screenshot">
+        </i>
+    </a>
+      <div id="inner" style="display: none">
+          <ul class="inline" id="zoom_circle_container">
+              <li>
+                  <span style="color:#ffffff;font-size: 10px">5</span><!--
+                      --><span id="zoom_minus"><i  class="icon-minus-sign icon-white hand"></i></span><!--
+                      --></li>
+              <li>
+                  <div id="slide_container">
+                    <div id="slider" class="hand"></div><!--
+                      --><div id="slider_bg" class="hand"></div><!--
+                      --><span id="slider_text" style="color:#ffffff;font-size: 10px"></span>
+                  </div>
+              </li>
+              <li>
+                  <span id="zoom_plus"><i class="icon-plus-sign icon-white hand"></i></span><!--
+                      --><span style="color:#ffffff;font-size: 10px">100</span>
+              </li>
+          </ul>
+      </div>
+</li><!--
+-->

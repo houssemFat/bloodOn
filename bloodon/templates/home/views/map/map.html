@@ -1,0 +1,29 @@
+{% load i18n %}
+<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=ar"></script>-->
+<!--mapBox-->
+ <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+ <script type="text/javascript" src="{{ STATIC_URL }}js/app/main/map/main.js"></script>
+ <script type="text/javascript" src="{{ STATIC_URL }}js/app/main/map/menu.helper.js"></script>
+ <script type="text/javascript" src="{{ STATIC_URL }}js/app/main/map/organization.js"></script>
+ <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+<!-- endMapBox -->
+<div class="row-fluid">
+	<!-- map user interface -->
+    
+    <!-- cancel select places -->
+	<div style="position: relative">
+	   <div id="cancel_select_organization" style="
+	    position: absolute;z-index: 20001;top:10px;right:20px;background-color:black;color:white;
+	    display: none">
+	       <button class="btn-medium btn-default">{% trans "Close" %}</button>
+	    </div>
+	    	
+	</div>
+	<!-- main map canvas -->
+	<div id="map-canvas" class="row-fluid" style="height:550px;px;width:100%">
+		{% include "home/views/map/map_user_interface.html" %}
+    </div>
+</div>

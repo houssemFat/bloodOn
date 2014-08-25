@@ -1,0 +1,17 @@
+<div class="app-calendar-tooltip">
+        {% load i18n %}
+    <table class="app-calendar-tooltip-table">
+    <tr>
+        {% for object in alerts %}
+            <td style="color:gray" class="app-calendar-tooltip-row" >
+               <span class="app-calendar-tooltip-blood">
+                    {{object.type}}
+               </span>
+               <span class="app-calendar-tooltip-blood-count">
+                    {{ object.count }}
+               </span>
+            </td>
+        {% endfor %}
+    </tr>
+    </table>
+</div>

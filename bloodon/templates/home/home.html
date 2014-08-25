@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+<!-- title -->
+
+{% block title %} BloodOn {% endblock %}
+
+<!-- extra head -->
+
+{% block extrahead %}
+	<script type="text/javascript" src="{{ STATIC_URL }}js/app/main/alert.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/app/main/messageMeManager.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/app/main/calendar.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/calendar.css">
+{% endblock %}
+
+{% block header %}
+	{% include "home/header.html" %}
+{% endblock %}
+
+{% block content %}
+{% include "home/organization/organizations.html" %}
+<div class="container-fluid home-container">
+    {% include "home/calendar/calendar.html" %}
+    {% include file_view %}
+</div>
+{% endblock %}
+{% block outside %}
+	{% include "home/alert.html" %}
+	{% include "home/calendar/calendar_modal.html" %}
+	{% include "common/sendto.html" %}
+    {% include "home/organization/organization_details.html" %}
+{% endblock %}

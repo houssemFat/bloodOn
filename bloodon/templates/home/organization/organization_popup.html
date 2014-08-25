@@ -1,0 +1,17 @@
+<div class="app-popup">
+    <div class="app-popup-body">
+        {% load i18n %}
+        <ul class="blood-info-ul">
+        {% for object in alerts %}
+                <li style="color:gray" class="blood-info-li" >
+                   <span class="blood-info-blood">
+                        {{object.type}}
+                   </span>
+                   <span class="blood-info-count">
+                        {{ object.count }}
+                   </span>
+                </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

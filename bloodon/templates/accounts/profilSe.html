@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% load i18n %}
+{% block title %}{% trans "Profile" %}{% endblock %}
+{% load bloodi_extras %}
+
+<!-- header -->
+
+<!-- endscripts -->
+{% block extrahead %}
+	{% if not user.is_authenticated %}
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/login.css">
+	{% endif %}
+	<script type="text/javascript" src="{{ STATIC_URL }}js/app/profile/profile.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/calendar.css">
+{% endblock %}
+
+{% block header %}
+	{% include "accounts/header.html" %}
+{% endblock %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% block content %}
+<div class="row-fluid text-center">
+		<div class="form-horizontal span8 offset2">
+            <!-- change display name -->
+            <div class="control-group row">
+                <label class="control-label" for="change_display_name">
+                	<span class="app-profile-label">{% trans "Your name" %}</span>
+                </label>
+                <div class="controls-row">
+                    <input type="text" id="input_display_name"  value="{{ user.username }}">
+                    <span><i class="write-arabic icon-pencil" for="input_display_name"></i></span>
+                   <button id="change_name_button" data-loading-text="saving..."  style="display: none" type="button" class="btn" data-toggle="button">{% trans "Save" %}</button>
+                </div>
+            </div>
+            <!-- change blood type name -->
+            <div class="control-group row">
+                <label class="control-label">
+                	<span class="app-profile-label">{% trans "Your blood type" %}</span>
+                </label>
+                <div class="controls-row">
+                    <select id="blood_type">
+                    {% for blood in bloods %}
+                        <option 
+                        value="{{ blood.id }}" 
+                        {% if myBlood == blood.id %}
+                            selected="true"
+                        {% endif %}>
+                        {{ blood.get_blood_display }} 
+                        </option>
+                    {% endfor %}
+                    </select>
+			         <button id="change_blood_type_button" style="display: none" data-loading-text="saving..." type="button" class="btn" data-toggle="button">{% trans "Save" %}</button>
+                </div>
+            </div>
+            <!-- change blood type name -->
+            <div class="control-group row">
+                <label class="control-label">
+                	<span class="app-profile-label">{% trans "Your language" %}</span><!--
+                    --><i class="icon-globe"></i>
+		</label>
+                <div class="controls-row languages text-center">
+		   {% get_current_language as CURRENT %}
+			<ul class="inline">                    
+			{% for lang in LANGUAGES  %}
+                        <li>
+				<form action="{% url "account_profile_setlang" %}" method="post" class="inline">
+                            		{% csrf_token%}
+                           	 	<input type="hidden" name="language" value="{{ lang.0 }}"/>
+                            		<input type="submit" {% if lang.0 == CURRENT %}class="active-language"{% endif %} value="{{ lang.1 }}"/>
+                        	</form>
+			</li>
+                    	{% endfor %}
+			</ul>
+                </div>
+            </div>
+            <div class="row-fluid row">
+                <a href="{% url 'account_change_password' %}" class="btn btn-success">{% trans "change password" %}</a>
+            </div>
+            <div class="row-fluid row">
+            {% trans "these informations are confidential. we promise that would not been shared" %} (*)
+            </div>
+        </div>
+</div>
+
+{% endblock %}
+
+

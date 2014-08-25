@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block home-link %}
+	{% include "home/empty-header.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="sing_in_modal" tabindex="-1" data-width="200">
+    <div class="modal-body span8 offset2">
+        <div class="row-fluid">
+            <div class="span6">
+            <h4 class="modal-title">Login </h4>
+            {{ form.errors }}
+            <form class="form-horizontal" id="login_form" role="form" method="POST" action="{% url 'account_login' %}" >
+                    {% csrf_token %}
+                  <input type="email" class="form-control" name="email" placeholder='{% trans "E-mail address" %}'/>
+                  <input type="password" class="form-control" name="password" placeholder='{% trans "Password" %}'/>
+                  <div class="form-group">
+                        <input type="checkbox" name="remember"> Remember me
+                        <button type="submit" class="btn btn-success">Enter</button>
+                        <small><a  href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a></small>
+                  </div>
+
+            </form>
+            </div>
+            <div class="span6">
+            <div class="row">
+                <h4 class="modal-title">{% trans "Use  Facebook & Google to quickliy find helper !" %}</h4>
+            </div>
+            <div>
+                <div class="row span8">
+                    <a class="inline" href="{% url 'socialaccount_signup' "facebook" %}">
+                    <div class="app-social-facebook pull-left" data-width="90px"></div><div class="inline pull-left">{% trans "Login with facebook" %}</div>
+                    </a>
+                </div>
+                <div class="row span4">
+                    <a class="inline" href="{% url 'socialaccount_signup' "google" %}"><div class="app-social app-social-google  inline"></div></a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

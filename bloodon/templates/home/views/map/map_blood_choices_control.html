@@ -1,0 +1,27 @@
+{% load i18n %}<!--
+--><li style="position: relative" id="map_blood_choices">
+    <a id="filter_choices_btn" title="{% trans "filter by blood type" %}" href="#" class="btn btn-info btn-small" >
+        <i class="icon-filter">
+        </i>
+    </a>
+  <div id="inner" style="display: none">
+      <ul class="inline" id="map_blood_choices_container">
+          {% for blood in bloods %}
+          {% if blood.get_blood_display != 'all' %}
+              <li id="{{ blood.id }}" class="blood-choice"  in="{%if blood.id in excluded_blood %}0{% else %}1{% endif %}">
+                <span class="blood-choice-item hand">
+                    {{ blood.get_blood_display }} 
+                   </span>
+                </li>
+          {% else %}
+             <li id="blood_choice_all" in="{% if excluded_blood|length > 0 %}0{% else %}1{% endif %}">
+                <span class="blood-choice-item hand">
+                    {{ blood.get_blood_display }} 
+                    </span>
+             </li>
+          {% endif %}
+      {% endfor %}
+      </ul>
+  </div>
+</li><!--
+-->

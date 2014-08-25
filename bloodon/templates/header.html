@@ -1,0 +1,39 @@
+{% include "messages.html" %}
+{% load url from future %}
+{% load i18n %}
+{% load socialaccount %}
+<style>
+    .app-header{
+        height: 32px;
+        color: #ffffff;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .app-header a{
+        color: #ffffff;
+        border-radius: 0px;
+        margin-left: 4px;
+    }
+</style>
+<div  class="app-header">
+    <div class="pull-left">
+        <span style="color: blue">bloodOn</span>
+         {% if not user.is_authenticated %}
+         <a id="btn_enter" href="#" class="btn btn-info btn-small">
+            <i class="icon-white icon-user"></i>
+            <span class="app-full-screen-text">{% trans "Login" %}</span>
+        </a>
+        {% else %}
+        {% block hot_link %}{% endblock %}
+        <a class="" href="http://bloodon.pythonanywhere.com/accounts/logout/">
+            <i class="icon-off"></i>
+        </a>
+        <img src="{{user_avatar_url}}" width="20px"  style="border-radius: 50%;height: 20px !important"/>
+    {% endif %}
+    </div>
+    <!--/.nav-collapse -->
+    <div class="pull-right">
+        {% block header_menu %}{% endblock %}
+    </div>
+</div>

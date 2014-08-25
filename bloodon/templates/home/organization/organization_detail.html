@@ -1,0 +1,17 @@
+{% load i18n %}
+{% for alert in alerts %}
+<div class="time-line-alert app-alert-item" id="{{alert.id}}">
+   <div class="app-alert-item-body">
+       <div class="time-line-blood">
+       {{  alert.blood.get_blood_display }}
+       </div>
+        <i class="icon-calendar"></i>
+        <span class="">{{ alert.date_for|date:"D d M Y" }}
+        </span>
+       <br/>
+        <i class="icon-map-marker"></i>
+        <span>{{ alert.organization.name }}</span>
+   </div>
+    {% include "home/organization/share.html" with url=alert.id  %}
+</div>
+{% endfor %}

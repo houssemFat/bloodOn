@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %} BloodOn {% endblock %}
+{% block extrahead %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/app/public/main.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/app/public/messageMeManager.js"></script>
+{% endblock %}
+{% block content %}
+	 <div class="row text-center" >
+	     <h1>{{ object.blood.get_blood_display }}</h1>
+	     <div>
+	         <div class="row" style="text-align: center ">
+             some one call for ,{{ object.blood.get_blood_display }}, 
+             for {{ object.date_for }}<!--
+          -->at : {{ object.contact }}
+             </div>
+            <div class="row">
+              {% include "common/social_share.html" with url=object.id %}
+              <a href="#" title="{% trans "Send to" %}" id="send_me_as_message" 
+              lang= "{{ object.blood.get_blood_display }}, {{ object.date_for }}"
+              class="btn btn-primary btn-small" object="{{object.id}}">
+                  <i class="icon-white icon-envelope"></i>
+             </a>
+            </div>
+	     </div>
+    </div>
+
+{% endblock %}
+{% block outside %}
+    {% include "common/sendto.html" %}
+{% endblock %}

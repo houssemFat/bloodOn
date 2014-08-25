@@ -1,0 +1,38 @@
+{% load i18n %}
+<div id="modal_send_to" class="modal fade" tabindex="-1" style="display: none;text-align:right">
+  <div class="modal-header text-center">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">{% trans "Send to" %}</h4>
+  </div>
+  <div class="modal-body">
+    <div class="span5">
+        <form accept-charset="UTF-8" action="" method="POST">
+             {% csrf_token %}
+            <!-- emails list -->
+            <div class="control-group">
+                  <span class="control-label"><span class="app-full-screen-text">{% trans "Emails list" %} *</span>
+                  </span>
+                  <div class="controls-row ltr" style="text-align: left">
+                    <input id="send_to_email" name="email" class="ltr pull-left"  type="email" title="" placeholder="{% trans "Add friends" %} *">
+                  </div>
+                   <div class="row-fluid" id="send_to_list_addresses">
+
+                   </div>
+            </div>
+            <!-- your name -->
+            <div class="control-group">
+                  <span class="control-label"><span class="app-full-screen-text">{% trans "Text" %} *</span>
+                      <i class="hand write-arabic icon-pencil" for="send_to_text"></i>
+                  </span>
+                  <div class="controls-row">
+                    <textarea id="send_to_text" name="text" value="" class="span5" placeholder="{% trans "Text" %}"></textarea>
+                  </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div class="modal-footer" style="text-align:left">
+    <button class="btn btn-info" type="submit" id="send_to_send_button"> {% trans "Send" %}</button>
+    <button type="button" data-dismiss="modal" class="btn btn-default">{% trans "Close" %}</button>
+  </div>
+</div>

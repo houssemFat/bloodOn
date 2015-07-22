@@ -267,7 +267,7 @@ BloodOn.GeoTools = {
         );
     },
     /**
-     * @param 
+     * @param
      */
     bindMapEvent: function(eventType, _function, context) {
         if (!BloodOn.GeoTools._map.__appEvents)
@@ -327,7 +327,7 @@ BloodOn.GeoTools.buildMap = function(id, viewOn, zoom) {
         _zoom = BloodOn.GeoTools.parseCoordinate($mapZoom[0].lang);
     }
 
-   var map = L.mapbox.map(id, 'houssemfat.map-jrzf0li9')
+   var map = L.mapbox.map(id, 'houssemfat.jb1n4p3f')
        .setView(_viewOn, _zoom);
     L.control.scale().addTo(map);
     BloodOn.GeoTools._map = map ;

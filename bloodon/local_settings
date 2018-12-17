@@ -1,6 +1,0 @@
-# -*- coding: utf-8 -*-
-LANGUAGES = (
-    ('fr', 'français'),
-    ('ar', 'العربية'), 
-    ('en', 'English')
-)

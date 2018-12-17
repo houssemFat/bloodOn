@@ -1,3 +1,5 @@
+cmd to run : `python manage.py runserver`
+it's recommanded to use venv to isolate all dependencies
 bloodOn
 =======
 

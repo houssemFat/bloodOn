@@ -1,8 +1,9 @@
+*__Disclaimer__*: This code is no longer maintained
+
 This web app was designed to facilitate blood donation in tunisia based on geolocation and urgent cases.
 
 [demo !](http://bloodon.pythonanywhere.com/)
 
-Disclaimer: This code is no longer maintained
 
 
 

@@ -1,12 +1,13 @@
+This web app was designed to facilitate blood donation in tunisia based on geolocation and urgent cases.
+
+[demo !](http://bloodon.pythonanywhere.com/)
+
+Disclaimer: This code is no longer maintained
+
+
+
 cmd to run : `python manage.py runserver`
 it's recommanded to use venv to isolate all dependencies
-bloodOn
-=======
-
-[alpha demo !](http://bloodon.pythonanywhere.com/)
-
-[Source code !](https://github.com/houssemFat/bloodOn)
-
 
 **Django**
 =======
